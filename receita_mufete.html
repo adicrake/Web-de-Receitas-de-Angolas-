@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <body>
+        <a href="index.html" class="btn-voltar">← Voltar para o Início</a>
+    </body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receita de Mufete | Sabores da Banda</title>
+    <style>
+        :root {
+            --vermelho: #cc0000;
+            --amarelo: #FFD700;
+            --preto: #1a1a1a;
+            --bege: #fdf5e6;
+            --branco: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bege);
+            color: var(--preto);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--preto);
+            padding: 20px 0;
+            border-bottom: 5px solid var(--amarelo);
+            text-align: center;
+        }
+
+        .logo-pequena {
+            height: 60px;
+        }
+
+        .btn-voltar {
+            display: inline-block;
+            text-decoration: none;
+            background-color: var(--preto);
+            color: var(--amarelo);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            border: 2px solid var(--amarelo);
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--branco);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .btn-voltar {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--vermelho);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--vermelho);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .meta-info {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+            color: #666;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .historia {
+            background: #fff9eb;
+            padding: 20px;
+            border-left: 5px solid var(--amarelo);
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .imagem-principal {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .secao {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--vermelho);
+            display: inline-block;
+            margin-bottom: 15px;
+            padding-right: 20px;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .ingredientes-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--preto);
+            color: white;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 600px) {
+            .ingredientes-grid { grid-template-columns: 1fr; }
+            .container { padding: 20px; margin: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="studio.png" alt="Sabores da Banda" class="logo-pequena">
+    </header>
+
+    <article class="container">
+       
+        <h1>Mufete Especial</h1>
+        
+        <div class="meta-info">
+            <span><strong>Tempo:</strong> 90 min</span>
+            <span><strong>Serve:</strong> 6 pessoas</span>
+            <span><strong>Origem:</strong> Luanda (Ilha)</span>
+        </div>
+
+        <section class="secao historia">
+            <p>"O Mufete é o rei dos sábados em Luanda. Nascido na Ilha do Cabo, este prato é mais do que comida: é um evento social que une famílias em volta da brasa e do peixe fresco."</p>
+        </section>
+
+        <img src="mufete1.jfif" alt="Mufete Angolano" class="imagem-principal">
+
+        <section class="secao">
+            <h2>Ingredientes</h2>
+            <div class="ingredientes-grid">
+                <div>
+                    <h3>Para o Peixe:</h3>
+                    <ul>
+                        <li>6 Cacussos (Tilápias) grandes e frescos</li>
+                        <li>4 dentes de alho esmagados</li>
+                        <li>Sal grosso a gosto</li>
+                        <li>Sumo de 2 limões</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Acompanhamentos:</h3>
+                    <ul>
+                        <li>500g de feijão manteiga</li>
+                        <li>1 chávena de óleo de palma</li>
+                        <li>3 Bananas-pão médias</li>
+                        <li>2 Mandiocas grandes</li>
+                        <li>2 Batatas-doces</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2>Modo de Preparo</h2>
+            <ol>
+                <li><strong>O Peixe:</strong> Limpe bem os peixes e faça cortes diagonais. Tempere com o alho, sal e limão. Deixe marinar por 30 minutos e leve à brasa (carvão) até dourar bem de ambos os lados.</li>
+                <li><strong>O Feijão:</strong> Coza o feijão manteiga até ficar macio. Em uma panela, aqueça o óleo de palma e junte o feijão com um pouco da água do cozimento, deixando apurar até ficar cremoso.</li>
+                <li><strong>Os Cozidos:</strong> Descasque a mandioca, a batata-doce e a banana-pão. Coza-os em panelas separadas com água e sal até ficarem macios.</li>
+                <li><strong>O Molho (Cru):</strong> Pique cebola roxa fininha, junte azeite, vinagre, um pouco de água morna, sal e gindungo (piri-piri) a gosto.</li>
+            </ol>
+        </section>
+
+        <section class="secao">
+            <h2>Como Servir</h2>
+            <p>Coloque o peixe no centro do prato, regue com o molho de cebola crua. Disponha os acompanhamentos cozidos e o feijão de óleo de palma ao lado. Não esqueça da farinha musseque para polvilhar sobre o feijão!</p>
+        </section>
+    </article>
+
+    <footer>
+        <p>Sabores da Banda - A essência de Angola</p>
+    </footer>
+
+</body>
+</html>
