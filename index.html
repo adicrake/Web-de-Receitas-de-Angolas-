@@ -1,0 +1,281 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores da Banda | Culinária Angolana</title>
+    <style>
+
+         /* --- ESTILIZAÇÃO (CSS) --- */
+        :root {
+            --vermelho: #cc0000;
+            --amarelo: #FFD700;
+            --preto: #1a1a1a;
+            --bege-claro: #fdf5e6; /* Cor de fundo mais quente */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bege-claro);
+            color: var(--preto);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px; /* Reduzi um pouco a largura total */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: var(--preto);
+            padding: 15px 0;
+            border-bottom: 4px solid var(--amarelo);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 100px; /* Logo mais discreto */
+            transition: transform 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        nav ul li a:hover {
+            color: var(--amarelo);
+        }
+
+        /* Banner Principal */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('capa.jfif');
+            background-size: cover;
+            background-position: center;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            margin-bottom: 40px;
+        }
+
+        /* Seção de Receitas */
+        .titulo-secao {
+            text-align: center;
+            color: var(--vermelho);
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+            position: relative;
+        }
+
+        .titulo-secao::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--amarelo);
+            margin: 10px auto;
+        }
+
+        .receitas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding-bottom: 50px;
+        }
+
+        /* Cartão de Receita (Onde as imagens são controladas) */
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-img-container {
+            width: 100%;
+            height: 200px; /* Altura fixa para todas as imagens */
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Faz a imagem preencher o espaço sem esticar */
+        }
+
+        .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-content h3 {
+            margin-bottom: 10px;
+            color: var(--preto);
+        }
+
+        .card-content p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .btn-receita {
+            display: inline-block;
+            background-color: var(--vermelho);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.8rem;
+            transition: background 0.3s;
+        }
+
+        .btn-receita:hover {
+            background-color: var(--preto);
+            color: var(--amarelo);
+        }
+
+        /* Rodapé */
+        footer {
+            background: var(--preto);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 20px;
+        }
+
+        /* Ajustes para Celular */
+        @media (max-width: 600px) {
+            header .container {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 15px;
+            }
+            nav ul li a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <img src="studio.png" alt="Sabores da Banda" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html1.html">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Sabores da Banda</h1>
+        <p>A alma da cozinha angolana na sua mesa</p>
+    </section>
+
+    <main class="container">
+        <h2 class="titulo-secao">Nossas Delícias</h2>
+        
+        <div class="receitas-grid">
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="mufete.jfif" alt="Mufete">
+                </div>
+                <div class="card-content">
+                    <h3>Mufete</h3>
+                    <p>Peixe grelhado, feijão de óleo de palma e guarnições típicas.</p>
+                    <a href="receita_mufete.html" class="btn-receita">VER RECEITA</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="calulu.jfif" alt="Calulu">
+                </div>
+                <div class="card-content">
+                    <h3>Calulu de carne seca</h3>
+                    <p>O sabor tradicional das folhas secas e o melhor peixe da costa.</p>
+                    <a href="caluludecarne.html" class="btn-receita">VER RECEITA</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="Funge com peixe___.jfif" alt="Calulu">
+                </div>
+                <div class="card-content">
+                    <h3>Funge com peixe e molho de tomate</h3>
+                    <p>O sabor tradicional das folhas secas e o melhor peixe da costa.</p>
+                    <a href="peixe.html" class="btn-receita">VER RECEITA</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="funge.jfif" alt="Funge">
+                </div>
+                <div class="card-content">
+                    <h3>Funge com ovo e chouriço</h3>
+                    <p>Funge de bombo ou milho, servido com aquele molho especial.</p>
+                    <a href="fungeovo.html" class="btn-receita">VER RECEITA</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>Sabores da Banda</strong></p>
+            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">
+                &copy; 2026 - Todos os direitos reservados à cultura angolana.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
